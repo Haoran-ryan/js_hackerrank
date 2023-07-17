@@ -1,3 +1,4 @@
 # js_hackerrank
-## Week 1 
-### Day 4 - Breaking the Records - Array maniupulation 
+| week 1 | Day 1      | Day 2       | Day 3           | Day 4                | Day 5        | Day 6 | Day 7 |
+|-------|------------|-------------|-----------------|----------------------|--------------|-------|-------|
+|       | Plus Minus | Min-Max Sum | Time Conversion | Breaking the Records | Camel Case 4 |       |       |
