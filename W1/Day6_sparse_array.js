@@ -34,6 +34,15 @@ Constraints
 */
 
 function matchingStrings(strings, queries) {
-    // Write your code here
-
+    let result = Array(queries.length).fill(0);
+    for (let x=0; x<queries.length; x++){
+        const query = queries[x]
+        for (let y=0; y< strings.length; y++){
+            const string = strings[y]
+            if(query === string){
+                result[x] += 1
+            }
+        };
+    };
+    return result
 }
