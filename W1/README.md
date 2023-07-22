@@ -41,4 +41,8 @@ const subArr = arr.slice(1, 4);
 console.log(subArr); // 输出: [2, 3, 4]
 ```
 
-## Day 6 - Sparse Array
+# Day 6 - Sparse Array
+
+## Array:
+### mutiple objects .fill
+- The Python way arr = [false] * 10 does not work in js.
