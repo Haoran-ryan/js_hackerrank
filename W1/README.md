@@ -40,3 +40,5 @@ const arr = [1, 2, 3, 4, 5];
 const subArr = arr.slice(1, 4);
 console.log(subArr); // 输出: [2, 3, 4]
 ```
+
+## Day 6 - Sparse Array
