@@ -56,4 +56,7 @@ function flippingBits(n) {
     return resultDecimal
 }
 
-flippingBits(9)
+function flippingBits2(n) {
+    return (~n >>> 0);
+}
+console.log(flippingBits2(9))

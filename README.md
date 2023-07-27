@@ -87,3 +87,25 @@ Sure, I'd be happy to explain what a 32-bit unsigned integer is. Here is a step 
 6.  `>>` : Right Shift  10 >> 1 = 1, 100 >> 2 = 1, 1000 >> 3 = 1
 7.  `>>>` : Zero-fill Right Shift  10 >>> 1 = 1, 100 >>> 2 = 1, 1000 >>> 3 = 1
   - NOTE： In most cases, the regular Right Shift operator is sufficient. The Unsigned Right Shift is only needed in very specific cases when you're dealing with the sign bit (the leftmost bit) in numbers. For positive numbers, >> and >>> work the same.
+
+### Very Nice Solution by ChatGPT
+Your solution is correct and it works as expected. However, you can simplify the solution by using a bitwise operation. 
+
+Since JavaScript bitwise operations are 32 bits, the result of NOT `~n` will be a 32 bits signed integer. This can cause issues when the first bit (the sign bit) is flipped from 0 to 1, which makes the number negative in a signed integer. 
+
+We can use the unsigned right shift operator `>>>` with a shift of 0, to convert the result back into an unsigned integer. This bitwise trick works because it discards the sign bit and shifts in zeros from the left, effectively giving us the 32 bit unsigned integer we want.
+
+Here's how you could simplify your code:
+
+```javascript
+function flippingBits(n) {
+    return (~n >>> 0);
+}
+```
+
+This function works as follows:
+
+1. `~n` performs the bitwise NOT operation on `n`, flipping all the bits.
+2. `>>> 0` shifts the result zero places to the right. This doesn't change the bitwise representation, but it does convert the number to an unsigned integer, effectively interpreting the sign bit as part of the number.
+
+This solution is more performant and easier to read than the original one. Remember, though, that JavaScript's bitwise operators treat their operands as 32 bit, so this solution will not work for numbers that need more than 32 bits. Given your constraints, this won't be a problem.
