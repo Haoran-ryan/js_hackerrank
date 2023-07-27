@@ -38,12 +38,22 @@ Sample Output
 
 function flippingBits(n) {
     // convert to binary 
-    const binN = n.toString(2);
-    for (let i =0; i < 32; i++){
-
+    const numToBinary = n.toString(2);
+    // pad with 0s to 32 bits
+    const padded = numToBinary.padStart(32, '0');
+    // flip the bit
+    let resultBinary = ''
+    for (let i=0; i<32; i++){
+        const cur_digit = padded[i]
+        if(cur_digit ==="0"){
+            resultBinary += '1'
+        }else{
+            resultBinary += '0'
+        }
     };
+    // convert to decimal 
+    const resultDecimal =  parseInt(resultBinary, 2)
+    return resultDecimal
 }
 
-
-const a = 1001
-console.log(~a)
+flippingBits(9)

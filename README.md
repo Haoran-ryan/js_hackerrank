@@ -76,3 +76,14 @@ Sure, I'd be happy to explain what a 32-bit unsigned integer is. Here is a step 
 
 ### Base conversion - from decimal to binary `toString()`
 - "decimalNumber".toString(2)
+
+### Bitwise operation in JS 
+1. `&` : AND  1 & 1 = 1, 1 & 0 = 0, 0 & 0 = 0
+2.  `|` : OR   1 | 1 = 1, 1 | 0 = 1, 0 | 0 = 0
+3.  `^` : XOR  1 ^ 1 = 0, 1 ^ 0 = 1, 0 ^ 0 = 0
+4.  `~` : NOT  ~1 = 0, ~0 = 1
+  - NOTE： In JavaScript, the bitwise NOT operation returns a negative number due to the way JavaScript handles binary numbers (Two's complement representation).
+5.  `<<` : Left Shift  1 << 1 = 10, 1 << 2 = 100, 1 << 3 = 1000
+6.  `>>` : Right Shift  10 >> 1 = 1, 100 >> 2 = 1, 1000 >> 3 = 1
+7.  `>>>` : Zero-fill Right Shift  10 >>> 1 = 1, 100 >>> 2 = 1, 1000 >>> 3 = 1
+  - NOTE： In most cases, the regular Right Shift operator is sufficient. The Unsigned Right Shift is only needed in very specific cases when you're dealing with the sign bit (the leftmost bit) in numbers. For positive numbers, >> and >>> work the same.
