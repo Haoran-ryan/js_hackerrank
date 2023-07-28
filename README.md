@@ -109,3 +109,6 @@ This function works as follows:
 2. `>>> 0` shifts the result zero places to the right. This doesn't change the bitwise representation, but it does convert the number to an unsigned integer, effectively interpreting the sign bit as part of the number.
 
 This solution is more performant and easier to read than the original one. Remember, though, that JavaScript's bitwise operators treat their operands as 32 bit, so this solution will not work for numbers that need more than 32 bits. Given your constraints, this won't be a problem.
+
+## Day 5 - Counting Valleys
+### Reflection - How to use one loop to check multiple conditions
