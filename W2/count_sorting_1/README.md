@@ -59,4 +59,4 @@ Each of the resulting values result[i] represents the number of times i appeared
 
 ## Reflections
 1. How to create an array of N elements with a pre-filled value?
-`new Array[N].fill("value")`
+`new Array(N).fill("value")`
