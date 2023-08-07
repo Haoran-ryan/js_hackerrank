@@ -44,3 +44,4 @@ Sample Input 0
 Sample Output 0
 2
 
+# 注意取值范围
