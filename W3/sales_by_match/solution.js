@@ -14,3 +14,24 @@ function sockMerchant(n, ar) {
 
 
 }
+
+// better solution
+function sockMerchant(n, ar) {
+    if(n === 1) {
+        return 0;
+    }
+
+    let socks = {};
+    let count = 0;
+
+    for (let sock of ar) {
+        if (socks[sock]) {
+            count++;
+            socks[sock] = 0; // reset the count for that sock color
+        } else {
+            socks[sock] = 1; // this sock is waiting for its pair
+        }
+    }
+
+    return count;
+}
