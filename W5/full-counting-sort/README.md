@@ -7,7 +7,7 @@ Design your counting sort to be stable.
 ### Example
 
 ```
-arr = [[0, a], [1, b], [0, c], [1, d]]
+arr = [[0, 'a'], [1, 'b'], [0, 'c'], [1, 'd']]
 ```
 
 The first two strings are placed with '-'. Since the maximum associated integer is 1, set up a helper array with at least two empty arrays as elements. The following shows the insertions into an array of three empty arrays.
